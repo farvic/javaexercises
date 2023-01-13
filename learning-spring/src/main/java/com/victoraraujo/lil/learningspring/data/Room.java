@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.data;
+package com.victoraraujo.lil.learningspring.data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

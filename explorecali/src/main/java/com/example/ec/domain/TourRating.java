@@ -1,8 +1,12 @@
 package com.example.ec.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.util.Objects;
 
 /**
@@ -10,27 +14,35 @@ import java.util.Objects;
  *
  * Created by Mary Ellen Bowman
  */
-@Entity
+@Document
 public class TourRating {
 
-    @EmbeddedId
-    private TourRatingPk pk;
+    @Id
+    private String id;
 
-    @Column(nullable = false)
+    private String tourId;
+
+    @NotNull
+    private Integer customerId;
+
+    @Min(0)
+    @Max(5)
     private Integer score;
 
-    @Column
+    @Size(max = 255)
     private String comment;
 
     /**
-     * Create a fully initialized TourRating.
+     * Construct a new Tour Rating.
      *
-     * @param pk      primiary key of a tour and customer id.
-     * @param score   Integer score (1-5)
-     * @param comment Optional comment from the customer
+     * @param tourId     tour identifier
+     * @param customerId customer identifier
+     * @param score      Integer score (1-5)
+     * @param comment    Optional comment from the customer
      */
-    public TourRating(TourRatingPk pk, Integer score, String comment) {
-        this.pk = pk;
+    public TourRating(String tourId, Integer customerId, Integer score, String comment) {
+        this.tourId = tourId;
+        this.customerId = customerId;
         this.score = score;
         this.comment = comment;
     }
@@ -38,13 +50,24 @@ public class TourRating {
     protected TourRating() {
     }
 
-    @Override
-    public String toString() {
-        return "TourRating{" +
-                "pk=" + pk +
-                ", score=" + score +
-                ", comment='" + comment + '\'' +
-                '}';
+    public Integer getScore() {
+        return score;
+    }
+
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     @Override
@@ -54,37 +77,26 @@ public class TourRating {
         if (o == null || getClass() != o.getClass())
             return false;
         TourRating that = (TourRating) o;
-        return Objects.equals(pk, that.pk) &&
+        return Objects.equals(id, that.id) &&
+                Objects.equals(tourId, that.tourId) &&
+                Objects.equals(customerId, that.customerId) &&
                 Objects.equals(score, that.score) &&
                 Objects.equals(comment, that.comment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(pk, score, comment);
+        return Objects.hash(id, tourId, customerId, score, comment);
     }
 
-    public TourRatingPk getPk() {
-        return pk;
-    }
-
-    public Integer getScore() {
-        return score;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setPk(TourRatingPk pk) {
-        this.pk = pk;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
+    @Override
+    public String toString() {
+        return "TourRating{" +
+                "id='" + id + '\'' +
+                ", tourId='" + tourId + '\'' +
+                ", customerId=" + customerId +
+                ", score=" + score +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

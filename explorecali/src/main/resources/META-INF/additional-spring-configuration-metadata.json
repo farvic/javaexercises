@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "ec.importfile",
+  "type": "java.lang.String",
+  "description": "A description for 'ec.importfile'"
+}]}

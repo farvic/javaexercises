@@ -1,6 +1,6 @@
 package com.example.ec.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -39,11 +39,9 @@ public class Tour {
     private TourPackage tourPackage;
 
     @Column
-    @Enumerated
     private Difficulty difficulty;
 
     @Column
-    @Enumerated
     private Region region;
 
     public Tour(String title, String description, String blurb, Integer price, String duration, String bullets,

@@ -1,6 +1,6 @@
 package com.example.ec.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 /**

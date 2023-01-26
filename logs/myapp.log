@@ -1,0 +1,29 @@
+2023-01-26 11:56:53.765  INFO 17148 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 on DESKTOP-4FRVMN0 with PID 17148 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-26 11:56:53.767 DEBUG 17148 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-26 11:56:53.767  INFO 17148 --- [main] com.example.ec.ExplorecaliApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-01-26 11:56:54.319  INFO 17148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-26 11:56:54.372  INFO 17148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2023-01-26 11:56:54.983  INFO 17148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-26 11:56:54.994  INFO 17148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-26 11:56:54.994  INFO 17148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-01-26 11:56:55.105  INFO 17148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-26 11:56:55.106  INFO 17148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1299 ms
+2023-01-26 11:56:55.239  INFO 17148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-26 11:56:55.397  INFO 17148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-26 11:56:55.529  INFO 17148 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-26 11:56:55.573  INFO 17148 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-26 11:56:55.695  INFO 17148 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-26 11:56:55.790  INFO 17148 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-26 11:56:56.223  INFO 17148 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-26 11:56:56.229  INFO 17148 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-26 11:56:56.701  WARN 17148 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-26 11:56:57.328  INFO 17148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-26 11:56:57.336  INFO 17148 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 3.833 seconds (JVM running for 4.242)
+2023-01-26 11:57:20.969  INFO 17148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-26 11:57:20.969  INFO 17148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-26 11:57:20.970  INFO 17148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-01-26 11:57:20.998  INFO 17148 --- [http-nio-8080-exec-1] com.example.ec.web.TourRatingController  : GET /tours/1/ratings
+2023-01-26 11:57:20.999  INFO 17148 --- [http-nio-8080-exec-1] c.example.ec.service.TourRatingService   : Lookup Rating for tour 1
+2023-01-26 11:59:47.141  INFO 17148 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-26 11:59:47.143  INFO 17148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-26 11:59:47.145  INFO 17148 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -17,8 +17,6 @@ import org.springframework.data.domain.Pageable;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import org.mockito.quality.Strictness;
-
 import java.util.Arrays;
 import java.util.Optional;
 

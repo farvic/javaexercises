@@ -79,7 +79,7 @@ public class TourRatingServiceIntegrationTest {
     // DataIntegrityViolationException thrown
     public void rateManyProveRollback() {
         assertThrows(DataIntegrityViolationException.class, () -> {
-            int ratings = service.lookupAll().size();
+            // int ratings = service.lookupAll().size();
             Integer customers[] = { 100, 101, 102 };
             service.rateMany(TOUR_ID, 3, customers);
             service.rateMany(TOUR_ID, 3, customers);

@@ -1,7 +1,7 @@
 package com.example.ec.domain;
 
-import javax.persistence.AttributeConverter;
-import javax.persistence.Converter;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 /**
  * Hibernate Converter for the Region Enum to DB Column.

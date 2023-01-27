@@ -2,6 +2,10 @@ package com.example.ec.web;
 
 import com.example.ec.domain.TourRating;
 import com.example.ec.service.TourRatingService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,16 +14,14 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedModel;
-import org.springframework.hateoas.RepresentationModel;
-import org.springframework.hateoas.server.RepresentationModelAssembler;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.AbstractMap;
-import java.util.List;
+
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
 /**
  * Tour Rating Controller
@@ -28,6 +30,7 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping(path = "/tours/{tourId}/ratings")
+@Tag(name = "Tour Rating", description = "Tour Rating API")
 public class TourRatingController {
     private static final Logger LOGGER = LoggerFactory.getLogger(TourRatingController.class);
     private TourRatingService tourRatingService;
@@ -52,6 +55,7 @@ public class TourRatingController {
      */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Create a Tour Rating")
     public void createTourRating(@PathVariable(value = "tourId") int tourId,
             @RequestBody @Validated RatingDto ratingDto) {
         LOGGER.info("POST /tours/{}/ratings", tourId);
@@ -67,6 +71,7 @@ public class TourRatingController {
      */
     @PostMapping("/{score}")
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Create Several Tour Ratings for one tour, score and several customers")
     public void createManyTourRatings(@PathVariable(value = "tourId") int tourId,
             @PathVariable(value = "score") int score,
             @RequestParam("customers") Integer customers[]) {
@@ -94,6 +99,7 @@ public class TourRatingController {
      * @return HATEOAS enabled page of ratings.
      */
     @GetMapping
+    @Operation(summary = "Lookup all ratings for a tour")
     public PagedModel<RatingDto> getAllRatingsForTour(@PathVariable(value = "tourId") int tourId, Pageable pageable,
             PagedResourcesAssembler<TourRating> pagedAssembler) {
         LOGGER.info("GET /tours/{}/ratings", tourId);
@@ -109,6 +115,7 @@ public class TourRatingController {
      * @return Tuple of "average" and the average value.
      */
     @GetMapping("/average")
+    @Operation(summary = "Calculate the average score of a Tour")
     public AbstractMap.SimpleEntry<String, Double> getAverage(@PathVariable(value = "tourId") int tourId) {
         LOGGER.info("GET /tours/{}/ratings/average", tourId);
         return new AbstractMap.SimpleEntry<String, Double>("average", tourRatingService.getAverageScore(tourId));
@@ -122,6 +129,7 @@ public class TourRatingController {
      * @return The modified Rating DTO.
      */
     @PutMapping
+    @Operation(summary = "Update score and comment of a Tour Rating")
     public RatingDto updateWithPut(@PathVariable(value = "tourId") int tourId,
             @RequestBody @Validated RatingDto ratingDto) {
         LOGGER.info("PUT /tours/{}/ratings", tourId);
@@ -137,6 +145,7 @@ public class TourRatingController {
      * @return The modified Rating DTO.
      */
     @PatchMapping
+    @Operation(summary = "Update score or comment of a Tour Rating")
     public RatingDto updateWithPatch(@PathVariable(value = "tourId") int tourId,
             @RequestBody @Validated RatingDto ratingDto) {
         LOGGER.info("PATCH /tours/{}/ratings", tourId);
@@ -151,6 +160,7 @@ public class TourRatingController {
      * @param customerId
      */
     @DeleteMapping("/{customerId}")
+    @Operation(summary = "Delete a Rating of a tour made by a customer")
     public void delete(@PathVariable(value = "tourId") int tourId, @PathVariable(value = "customerId") int customerId) {
         LOGGER.info("DELETE /tours/{}/ratings/{}", tourId, customerId);
         tourRatingService.delete(tourId, customerId);

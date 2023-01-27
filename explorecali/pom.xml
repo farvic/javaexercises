@@ -58,12 +58,12 @@
 			<scope>compile</scope>
 			<version>2.0.2</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<scope>compile</scope>
 			<version>2.0.2</version>
-		</dependency> -->
+		</dependency>
 		<!-- <dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
@@ -76,7 +76,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
@@ -89,7 +89,7 @@
 					<exclude>org.springdoc:springdoc-openapi-starter-webmvc-ui</exclude>
 				</excludes>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<!-- <plugin>
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-starter-common</artifactId>

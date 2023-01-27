@@ -2,6 +2,8 @@ package com.example.ec.repo;
 
 import com.example.ec.domain.Tour;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -16,6 +18,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
  *
  * Created by Mary Ellen Bowman
  */
+@Tag(name = "Tour", description = "Tour API")
 public interface TourRepository extends PagingAndSortingRepository<Tour, Integer>, CrudRepository<Tour, Integer> {
     /**
      * Find Tours associated with the Tour Package.

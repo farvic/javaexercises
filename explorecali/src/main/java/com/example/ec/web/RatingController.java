@@ -2,10 +2,13 @@ package com.example.ec.web;
 
 import com.example.ec.service.TourRatingService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +21,7 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping(path = "/ratings")
+@Tag(name = "Rating", description = "Rating API")
 public class RatingController {
     private static final Logger LOGGER = LoggerFactory.getLogger(RatingController.class);
     private TourRatingService tourRatingService;
@@ -37,6 +41,8 @@ public class RatingController {
     // }
 
     @GetMapping
+    @Operation(summary = "Get all ratings", description = "Get all ratings for all tours")
+    @ApiResponse(responseCode = "200", description = "OK")
     public List<RatingDto> getAll() {
         LOGGER.info("GET /ratings");
         return tourRatingService.lookupAll().stream()
@@ -44,6 +50,8 @@ public class RatingController {
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Get a rating by id", description = "Get rating for a tour")
+    @ApiResponse(responseCode = "200", description = "OK")
     public RatingDto getRating(@PathVariable("id") Integer id) {
         LOGGER.info("GET /ratings/{id}", id);
         return assembler.toModel(tourRatingService.lookupRatingById(id)

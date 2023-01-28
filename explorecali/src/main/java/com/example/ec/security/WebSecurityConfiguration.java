@@ -28,6 +28,7 @@ public class WebSecurityConfiguration {
         // Entry points
         http.authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                 .requestMatchers("/users/signin").permitAll()
+                .requestMatchers("/users/signup").permitAll()
                 .requestMatchers("/packages/**").permitAll()
                 .requestMatchers("/tours/**").permitAll()
                 .requestMatchers("/ratings/**").permitAll()

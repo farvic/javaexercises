@@ -1,7 +1,12 @@
 package com.example.ec.service;
 
+import com.example.ec.domain.Role;
+import com.example.ec.domain.User;
 import com.example.ec.repo.RoleRepository;
 import com.example.ec.repo.UserRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +43,24 @@ public class UserService {
     public Authentication signin(String username, String password) {
         LOGGER.info("Authenticating with username: {} and password: {}", username, password);
         return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+    }
+
+    public Optional<User> signup(String username, String password, String firstName, String lastName) {
+        if (!userRepository.findByUsername(username).isPresent()) {
+            Optional<Role> role = roleRepository.findByRoleName("ROLE_CSR");
+            LOGGER.info("{} {} is signing up with username: {}, password: {} and role: {}.", firstName, lastName,
+                    username, password, role.get().getRoleName());
+            return Optional.of(userRepository.save(new User(username,
+                    passwordEncoder.encode(password),
+                    role.get(),
+                    firstName,
+                    lastName)));
+        }
+        return Optional.empty();
+    }
+
+    public List<User> getAll() {
+        return userRepository.findAll();
     }
 
 }

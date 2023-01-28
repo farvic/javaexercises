@@ -30,7 +30,6 @@ public class TourRatingService {
      * @param tourRatingRepository Tour Rating Repository
      * @param tourRepository       Tour Repository
      */
-    @Autowired
     public TourRatingService(TourRatingRepository tourRatingRepository, TourRepository tourRepository) {
         this.tourRatingRepository = tourRatingRepository;
         this.tourRepository = tourRepository;

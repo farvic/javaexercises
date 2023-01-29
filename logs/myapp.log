@@ -32,3 +32,668 @@
 2023-01-29T01:00:15.372-03:00  INFO 17640 --- [http-nio-8080-exec-3] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
 2023-01-29T01:00:15.373-03:00  INFO 17640 --- [http-nio-8080-exec-3] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
 2023-01-29T01:00:15.455-03:00  INFO 17640 --- [http-nio-8080-exec-3] com.example.ec.service.UserService       : Authenticating with username: admin and password: letmein
+2023-01-29T13:41:19.416-03:00  INFO 25764 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 25764 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T13:41:19.429-03:00 DEBUG 25764 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T13:41:19.430-03:00  INFO 25764 --- [main] com.example.ec.ExplorecaliApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T13:41:20.175-03:00  INFO 25764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T13:41:20.231-03:00  INFO 25764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
+2023-01-29T13:41:20.804-03:00  INFO 25764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T13:41:20.814-03:00  INFO 25764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T13:41:20.815-03:00  INFO 25764 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T13:41:20.911-03:00  INFO 25764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T13:41:20.911-03:00  INFO 25764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1428 ms
+2023-01-29T13:41:21.021-03:00  INFO 25764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T13:41:21.337-03:00  INFO 25764 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120350eb
+2023-01-29T13:41:21.339-03:00  INFO 25764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T13:41:21.820-03:00  INFO 25764 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T13:41:21.861-03:00  INFO 25764 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-29T13:41:21.984-03:00  WARN 25764 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T13:41:22.122-03:00  INFO 25764 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-01-29T13:41:22.795-03:00  INFO 25764 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T13:41:22.802-03:00  INFO 25764 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T13:41:23.067-03:00  INFO 25764 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T13:41:23.411-03:00  WARN 25764 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T13:41:24.216-03:00  INFO 25764 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5220e6ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@602d5417, org.springframework.security.web.context.SecurityContextHolderFilter@1d921267, org.springframework.security.web.header.HeaderWriterFilter@900ffc4, org.springframework.security.web.authentication.logout.LogoutFilter@2dedde74, com.example.ec.security.JwtTokenFilter@75128cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@684a34f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52ec5ba6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33ccab9c, org.springframework.security.web.session.SessionManagementFilter@3eb7ff78, org.springframework.security.web.access.ExceptionTranslationFilter@10b36d8a, org.springframework.security.web.access.intercept.AuthorizationFilter@20425fab]
+2023-01-29T13:41:24.585-03:00  INFO 25764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T13:41:24.593-03:00  INFO 25764 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 5.455 seconds (process running for 5.951)
+2023-01-29T13:52:42.095-03:00  INFO 10080 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 10080 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T13:52:42.097-03:00 DEBUG 10080 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T13:52:42.098-03:00  INFO 10080 --- [main] com.example.ec.ExplorecaliApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T13:52:42.790-03:00  INFO 10080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T13:52:42.842-03:00  INFO 10080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2023-01-29T13:52:43.456-03:00  INFO 10080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T13:52:43.465-03:00  INFO 10080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T13:52:43.466-03:00  INFO 10080 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T13:52:43.556-03:00  INFO 10080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T13:52:43.557-03:00  INFO 10080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1412 ms
+2023-01-29T13:52:43.712-03:00  INFO 10080 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T13:52:43.713-03:00  INFO 10080 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T13:52:43.713-03:00  INFO 10080 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T13:52:43.723-03:00  INFO 10080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T13:52:43.979-03:00  INFO 10080 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ce15112
+2023-01-29T13:52:43.980-03:00  INFO 10080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T13:52:43.986-03:00  WARN 10080 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsupported Database: MySQL 8.0
+2023-01-29T13:52:43.986-03:00  INFO 10080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T13:52:43.989-03:00  INFO 10080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T13:52:43.992-03:00  INFO 10080 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T13:52:44.002-03:00  INFO 10080 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T13:52:44.018-03:00 ERROR 10080 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsupported Database: MySQL 8.0
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.api.FlywayException: Unsupported Database: MySQL 8.0
+	at org.flywaydb.core.internal.database.DatabaseTypeRegister.getDatabaseTypeForConnection(DatabaseTypeRegister.java:105)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:146)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+
+2023-01-29T13:57:35.778-03:00  INFO 20116 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 20116 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T13:57:35.780-03:00 DEBUG 20116 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T13:57:35.781-03:00  INFO 20116 --- [main] com.example.ec.ExplorecaliApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T13:57:36.488-03:00  INFO 20116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T13:57:36.552-03:00  INFO 20116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2023-01-29T13:57:37.136-03:00  INFO 20116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T13:57:37.147-03:00  INFO 20116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T13:57:37.148-03:00  INFO 20116 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T13:57:37.256-03:00  INFO 20116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T13:57:37.256-03:00  INFO 20116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
+2023-01-29T13:57:37.416-03:00  INFO 20116 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T13:57:37.417-03:00  INFO 20116 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T13:57:37.417-03:00  INFO 20116 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T13:57:37.426-03:00  INFO 20116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T13:57:37.679-03:00  INFO 20116 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d4df0f4
+2023-01-29T13:57:37.680-03:00  INFO 20116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T13:57:37.713-03:00  INFO 20116 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:6604/explorecali (MySQL 8.0)
+2023-01-29T13:57:37.778-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.020s)
+2023-01-29T13:57:37.814-03:00  INFO 20116 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `explorecali`.`flyway_schema_history` ...
+2023-01-29T13:57:37.912-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `explorecali`: << Empty Schema >>
+2023-01-29T13:57:37.926-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.1 - CreateTourSchema"
+2023-01-29T13:57:38.112-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.2 - AddTours"
+2023-01-29T13:57:38.197-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.3 - CreateTourRatingSchema"
+2023-01-29T13:57:38.287-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.4 - AddTourRatings"
+2023-01-29T13:57:38.319-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "2.1 - CreateSecuritySchema"
+2023-01-29T13:57:38.404-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "2.2 - AddUsers"
+2023-01-29T13:57:38.433-03:00  INFO 20116 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema `explorecali`, now at version v2.2 (execution time 00:00.533s)
+2023-01-29T13:57:38.509-03:00  INFO 20116 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T13:57:38.548-03:00  INFO 20116 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-29T13:57:38.724-03:00  WARN 20116 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T13:57:38.835-03:00  INFO 20116 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-01-29T13:57:39.440-03:00  INFO 20116 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T13:57:39.446-03:00  INFO 20116 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T13:57:39.693-03:00  INFO 20116 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T13:57:39.999-03:00  WARN 20116 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T13:57:40.754-03:00  INFO 20116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e60be48, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20a533b, org.springframework.security.web.context.SecurityContextHolderFilter@3a5663ef, org.springframework.security.web.header.HeaderWriterFilter@5d72dd86, org.springframework.security.web.authentication.logout.LogoutFilter@638b05fb, com.example.ec.security.JwtTokenFilter@5db6083b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d0fe80c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d414943, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3db48e6, org.springframework.security.web.session.SessionManagementFilter@6fb3d3bb, org.springframework.security.web.access.ExceptionTranslationFilter@69bdcfbc, org.springframework.security.web.access.intercept.AuthorizationFilter@2972b493]
+2023-01-29T13:57:41.087-03:00  INFO 20116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T13:57:41.097-03:00  INFO 20116 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 5.587 seconds (process running for 6.058)
+2023-01-29T14:19:48.137-03:00  INFO 28164 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 28164 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T14:19:48.138-03:00 DEBUG 28164 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T14:19:48.139-03:00  INFO 28164 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T14:19:48.830-03:00  INFO 28164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T14:19:48.887-03:00  INFO 28164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+2023-01-29T14:19:49.466-03:00  INFO 28164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T14:19:49.477-03:00  INFO 28164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T14:19:49.477-03:00  INFO 28164 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T14:19:49.573-03:00  INFO 28164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T14:19:49.574-03:00  INFO 28164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1390 ms
+2023-01-29T14:19:49.726-03:00  INFO 28164 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T14:19:49.727-03:00  INFO 28164 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T14:19:49.727-03:00  INFO 28164 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T14:19:49.736-03:00  INFO 28164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T14:19:49.916-03:00  INFO 28164 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:3e533583-b6b7-494b-8bd3-55bb4d9bd205 user=SA
+2023-01-29T14:19:49.917-03:00  INFO 28164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T14:19:49.928-03:00  INFO 28164 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:3e533583-b6b7-494b-8bd3-55bb4d9bd205 (H2 2.1)
+2023-01-29T14:19:49.982-03:00  INFO 28164 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.015s)
+2023-01-29T14:19:49.988-03:00  INFO 28164 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T14:19:50.012-03:00  INFO 28164 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T14:19:50.018-03:00  INFO 28164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T14:19:50.062-03:00  INFO 28164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T14:19:50.077-03:00  INFO 28164 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T14:19:50.087-03:00 ERROR 28164 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "1.3 - CreateTourRatingSchema" failed! Please restore backups and roll back database and code!
+2023-01-29T14:19:50.090-03:00  WARN 28164 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1.3__CreateTourRatingSchema.sql failed
+-------------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "ALTER TABLE tour_rating ADD UNIQUE [*]MyConstraint (tour_id, customer_id)"; expected "("; SQL statement:
+ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id) [42001-214]
+Location   : db/migration/V1.3__CreateTourRatingSchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V1.3__CreateTourRatingSchema.sql)
+Line       : 11
+Statement  : ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id)
+
+2023-01-29T14:19:50.092-03:00  INFO 28164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T14:19:50.103-03:00  INFO 28164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T14:19:50.105-03:00  INFO 28164 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T14:19:50.115-03:00  INFO 28164 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T14:19:50.130-03:00 ERROR 28164 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V1.3__CreateTourRatingSchema.sql failed
+-------------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "ALTER TABLE tour_rating ADD UNIQUE [*]MyConstraint (tour_id, customer_id)"; expected "("; SQL statement:
+ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id) [42001-214]
+Location   : db/migration/V1.3__CreateTourRatingSchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V1.3__CreateTourRatingSchema.sql)
+Line       : 11
+Statement  : ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V1.3__CreateTourRatingSchema.sql failed
+-------------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "ALTER TABLE tour_rating ADD UNIQUE [*]MyConstraint (tour_id, customer_id)"; expected "("; SQL statement:
+ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id) [42001-214]
+Location   : db/migration/V1.3__CreateTourRatingSchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V1.3__CreateTourRatingSchema.sql)
+Line       : 11
+Statement  : ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id)
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V1.3__CreateTourRatingSchema.sql failed
+-------------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "ALTER TABLE tour_rating ADD UNIQUE [*]MyConstraint (tour_id, customer_id)"; expected "("; SQL statement:
+ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id) [42001-214]
+Location   : db/migration/V1.3__CreateTourRatingSchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V1.3__CreateTourRatingSchema.sql)
+Line       : 11
+Statement  : ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id)
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE tour_rating ADD UNIQUE [*]MyConstraint (tour_id, customer_id)"; expected "("; SQL statement:
+ALTER TABLE tour_rating ADD UNIQUE MyConstraint (tour_id, customer_id) [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:900)
+	at org.h2.command.Parser.read(Parser.java:5675)
+	at org.h2.command.Parser.parseTableConstraintIf(Parser.java:9086)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8479)
+	at org.h2.command.Parser.parseAlter(Parser.java:7548)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:666)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T14:21:43.639-03:00  INFO 27620 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 27620 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T14:21:43.640-03:00 DEBUG 27620 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T14:21:43.641-03:00  INFO 27620 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T14:21:44.328-03:00  INFO 27620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T14:21:44.389-03:00  INFO 27620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 5 JPA repository interfaces.
+2023-01-29T14:21:45.006-03:00  INFO 27620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T14:21:45.018-03:00  INFO 27620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T14:21:45.019-03:00  INFO 27620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T14:21:45.119-03:00  INFO 27620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T14:21:45.120-03:00  INFO 27620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1432 ms
+2023-01-29T14:21:45.268-03:00  INFO 27620 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T14:21:45.268-03:00  INFO 27620 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T14:21:45.269-03:00  INFO 27620 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T14:21:45.276-03:00  INFO 27620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T14:21:45.426-03:00  INFO 27620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:a3bd4478-444d-4292-a32c-bf4dd8737fb7 user=SA
+2023-01-29T14:21:45.429-03:00  INFO 27620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T14:21:45.441-03:00  INFO 27620 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:a3bd4478-444d-4292-a32c-bf4dd8737fb7 (H2 2.1)
+2023-01-29T14:21:45.495-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.016s)
+2023-01-29T14:21:45.499-03:00  INFO 27620 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T14:21:45.520-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T14:21:45.526-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T14:21:45.561-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T14:21:45.575-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T14:21:45.581-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T14:21:45.586-03:00  INFO 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T14:21:45.595-03:00 ERROR 27620 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T14:21:45.599-03:00  WARN 27620 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE[*]=INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 2
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB
+
+2023-01-29T14:21:45.602-03:00  INFO 27620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T14:21:45.605-03:00  INFO 27620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T14:21:45.607-03:00  INFO 27620 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T14:21:45.618-03:00  INFO 27620 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T14:21:45.634-03:00 ERROR 27620 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE[*]=INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 2
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE[*]=INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 2
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE[*]=INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 2
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE[*]=INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE=INNODB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T14:22:59.118-03:00  INFO 21752 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 21752 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T14:22:59.120-03:00 DEBUG 21752 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T14:22:59.121-03:00  INFO 21752 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T14:22:59.816-03:00  INFO 21752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T14:22:59.870-03:00  INFO 21752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+2023-01-29T14:23:00.472-03:00  INFO 21752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T14:23:00.484-03:00  INFO 21752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T14:23:00.484-03:00  INFO 21752 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T14:23:00.580-03:00  INFO 21752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T14:23:00.580-03:00  INFO 21752 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1414 ms
+2023-01-29T14:23:00.732-03:00  INFO 21752 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T14:23:00.732-03:00  INFO 21752 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T14:23:00.733-03:00  INFO 21752 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T14:23:00.740-03:00  INFO 21752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T14:23:00.887-03:00  INFO 21752 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dffc04f1-1be8-4936-9aec-58fbfff2eefc user=SA
+2023-01-29T14:23:00.889-03:00  INFO 21752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T14:23:00.898-03:00  INFO 21752 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:dffc04f1-1be8-4936-9aec-58fbfff2eefc (H2 2.1)
+2023-01-29T14:23:00.956-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.024s)
+2023-01-29T14:23:00.961-03:00  INFO 21752 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T14:23:00.981-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T14:23:00.987-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T14:23:01.024-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T14:23:01.039-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T14:23:01.046-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T14:23:01.053-03:00  INFO 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T14:23:01.063-03:00 ERROR 21752 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T14:23:01.067-03:00  WARN 21752 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+2023-01-29T14:23:01.069-03:00  INFO 21752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T14:23:01.084-03:00  INFO 21752 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T14:23:01.088-03:00  INFO 21752 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T14:23:01.105-03:00  INFO 21752 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T14:23:01.126-03:00 ERROR 21752 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T14:25:37.390-03:00  INFO 7344 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 7344 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos)
+2023-01-29T14:25:37.392-03:00 DEBUG 7344 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T14:25:37.393-03:00  INFO 7344 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "mysql"
+2023-01-29T14:25:38.075-03:00  INFO 7344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T14:25:38.135-03:00  INFO 7344 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2023-01-29T14:25:38.710-03:00  INFO 7344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T14:25:38.720-03:00  INFO 7344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T14:25:38.721-03:00  INFO 7344 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T14:25:38.822-03:00  INFO 7344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T14:25:38.822-03:00  INFO 7344 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1385 ms
+2023-01-29T14:25:38.968-03:00  INFO 7344 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T14:25:38.969-03:00  INFO 7344 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T14:25:38.969-03:00  INFO 7344 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T14:25:38.977-03:00  INFO 7344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T14:25:39.228-03:00  INFO 7344 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bb6f3f7
+2023-01-29T14:25:39.230-03:00  INFO 7344 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T14:25:39.258-03:00  INFO 7344 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:6604/explorecali (MySQL 8.0)
+2023-01-29T14:25:39.321-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.021s)
+2023-01-29T14:25:39.345-03:00  INFO 7344 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `explorecali`.`flyway_schema_history` ...
+2023-01-29T14:25:39.415-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `explorecali`: << Empty Schema >>
+2023-01-29T14:25:39.425-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.1 - CreateTourSchema"
+2023-01-29T14:25:39.576-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.2 - AddTours"
+2023-01-29T14:25:39.678-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.3 - CreateTourRatingSchema"
+2023-01-29T14:25:39.790-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "1.4 - AddTourRatings"
+2023-01-29T14:25:39.824-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "2.1 - CreateSecuritySchema"
+2023-01-29T14:25:39.910-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema `explorecali` to version "2.2 - AddUsers"
+2023-01-29T14:25:39.948-03:00  INFO 7344 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema `explorecali`, now at version v2.2 (execution time 00:00.540s)
+2023-01-29T14:25:40.027-03:00  INFO 7344 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T14:25:40.069-03:00  INFO 7344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-29T14:25:40.188-03:00  WARN 7344 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T14:25:40.284-03:00  INFO 7344 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-01-29T14:25:40.879-03:00  INFO 7344 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T14:25:40.885-03:00  INFO 7344 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T14:25:41.146-03:00  INFO 7344 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T14:25:41.504-03:00  WARN 7344 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T14:25:42.206-03:00  INFO 7344 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@418f0f27, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@427946b9, org.springframework.security.web.context.SecurityContextHolderFilter@59e24c62, org.springframework.security.web.header.HeaderWriterFilter@7200702, org.springframework.security.web.authentication.logout.LogoutFilter@45594dfe, com.example.ec.security.JwtTokenFilter@fe58644, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@744c16fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31e5d408, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ecb87b2, org.springframework.security.web.session.SessionManagementFilter@11e36e5c, org.springframework.security.web.access.ExceptionTranslationFilter@3095c449, org.springframework.security.web.access.intercept.AuthorizationFilter@c11ec9b]
+2023-01-29T14:25:42.519-03:00  INFO 7344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-29T14:25:42.527-03:00  INFO 7344 --- [main] com.example.ec.ExplorecaliApplication    : Started ExplorecaliApplication in 5.406 seconds (process running for 5.87)

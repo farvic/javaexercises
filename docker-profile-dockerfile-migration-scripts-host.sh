@@ -1,0 +1,1 @@
+docker run --name ec-app -p 8080:8080 -v ~/db/migration:/mnt/d/javaestudos/migration -e server=ec-mysql -e port=3306 -e dbuser=cali_user -e dbpassword=cali_pass --link ec-mysql:mysql -d explorecali

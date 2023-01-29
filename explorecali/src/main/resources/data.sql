@@ -683,7 +683,7 @@ VALUES
     'admin',
     '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu',
     'Administrator',
-    'Administrator'
+    'Adminstrator'
   ),
   (
     'csr_jane',
@@ -706,14 +706,14 @@ VALUES
 
 -- ROLES
 INSERT INTO
-  security_role (id, role_name, description)
+  security_role (role_name, description)
 VALUES
-  (1, 'ROLE_ADMIN', 'Administrator');
+  ('ROLE_ADMIN', 'Administrator');
 
 INSERT INTO
-  security_role (id, role_name, description)
+  security_role (role_name, description)
 VALUES
-  (2, 'ROLE_CSR', 'Customer Service Representative');
+  ('ROLE_CSR', 'Customer Service Representative');
 
 INSERT INTO
   user_role(user_id, role_id)

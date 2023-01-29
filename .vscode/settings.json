@@ -1,7 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.project.sourcePaths": [
-        "first-microservice"
-    ],
+    "java.project.sourcePaths": [],
     "java.dependency.packagePresentation": "hierarchical"
 }

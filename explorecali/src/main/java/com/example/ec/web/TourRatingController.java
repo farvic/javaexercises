@@ -16,6 +16,7 @@ import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedModel;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,6 +55,7 @@ public class TourRatingController {
      * @param ratingDto
      */
     @PostMapping
+    @PreAuthorize("hasRole('ROLE_CSR')")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create a Tour Rating")
     public void createTourRating(@PathVariable(value = "tourId") int tourId,
@@ -70,6 +72,7 @@ public class TourRatingController {
      * @param customers
      */
     @PostMapping("/{score}")
+    @PreAuthorize("hasRole('ROLE_CSR')")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create Several Tour Ratings for one tour, score and several customers")
     public void createManyTourRatings(@PathVariable(value = "tourId") int tourId,
@@ -129,6 +132,7 @@ public class TourRatingController {
      * @return The modified Rating DTO.
      */
     @PutMapping
+    @PreAuthorize("hasRole('ROLE_CSR')")
     @Operation(summary = "Update score and comment of a Tour Rating")
     public RatingDto updateWithPut(@PathVariable(value = "tourId") int tourId,
             @RequestBody @Validated RatingDto ratingDto) {
@@ -145,6 +149,7 @@ public class TourRatingController {
      * @return The modified Rating DTO.
      */
     @PatchMapping
+    @PreAuthorize("hasRole('ROLE_CSR')")
     @Operation(summary = "Update score or comment of a Tour Rating")
     public RatingDto updateWithPatch(@PathVariable(value = "tourId") int tourId,
             @RequestBody @Validated RatingDto ratingDto) {
@@ -160,6 +165,7 @@ public class TourRatingController {
      * @param customerId
      */
     @DeleteMapping("/{customerId}")
+    @PreAuthorize("hasRole('ROLE_CSR')")
     @Operation(summary = "Delete a Rating of a tour made by a customer")
     public void delete(@PathVariable(value = "tourId") int tourId, @PathVariable(value = "customerId") int customerId) {
         LOGGER.info("DELETE /tours/{}/ratings/{}", tourId, customerId);

@@ -25,14 +25,13 @@ import static org.mockito.Mockito.when;
 import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserControllerTest {
 
     private LoginDto signupDto = new LoginDto("larry", "1234", "larry", "miller");
     private User user = new User(signupDto.getUsername(), signupDto.getPassword(), new Role(),
-                                 signupDto.getFirstName(), signupDto.getLastName());
+            signupDto.getFirstName(), signupDto.getLastName());
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -40,11 +39,10 @@ public class UserControllerTest {
     @MockBean
     private UserService service;
 
-
     @Test
     public void signin() {
         restTemplate.postForEntity("/users/signin", new LoginDto("admin", "myPass"), Void.class);
-        verify(this.service).signin("admin","myPass");
+        verify(this.service).signin("admin", "myPass");
     }
 
     @Test
@@ -62,7 +60,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void signupUnauthorized(){
+    public void signupUnauthorized() {
 
         ResponseEntity<User> response = restTemplate.exchange("/users/signup",
                 POST,

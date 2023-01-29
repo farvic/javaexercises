@@ -6,7 +6,7 @@ import com.example.ec.repo.TourRatingRepository;
 import com.example.ec.repo.TourRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -30,7 +30,6 @@ public class TourRatingService {
      * @param tourRatingRepository Tour Rating Repository
      * @param tourRepository       Tour Repository
      */
-    @Autowired
     public TourRatingService(TourRatingRepository tourRatingRepository, TourRepository tourRepository) {
         this.tourRatingRepository = tourRatingRepository;
         this.tourRepository = tourRepository;

@@ -27706,3 +27706,1356 @@ CREATE TABLE security_role (
 2023-01-29T14:44:32.634-03:00  INFO 9688 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-01-29T14:44:32.636-03:00  INFO 9688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-01-29T14:44:32.647-03:00  INFO 9688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:17:36.532-03:00  INFO 21912 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 21912 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:17:36.551-03:00 DEBUG 21912 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:17:36.552-03:00  INFO 21912 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T15:17:37.082-03:00  INFO 21912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:17:37.128-03:00  INFO 21912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:17:37.611-03:00  INFO 21912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T15:17:37.619-03:00  INFO 21912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:17:37.619-03:00  INFO 21912 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:17:37.699-03:00  INFO 21912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:17:37.700-03:00  INFO 21912 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
+2023-01-29T15:17:37.817-03:00  INFO 21912 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:17:37.818-03:00  INFO 21912 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:17:37.818-03:00  INFO 21912 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:17:37.824-03:00  INFO 21912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:17:37.976-03:00  INFO 21912 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bf31658c-0e31-492b-8d4f-1dcf97212599 user=SA
+2023-01-29T15:17:37.978-03:00  INFO 21912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:17:37.985-03:00  INFO 21912 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:bf31658c-0e31-492b-8d4f-1dcf97212599 (H2 2.1)
+2023-01-29T15:17:38.028-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.010s)
+2023-01-29T15:17:38.033-03:00  INFO 21912 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:17:38.049-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:17:38.053-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:17:38.087-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:17:38.098-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:17:38.103-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:17:38.108-03:00  INFO 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:17:38.113-03:00 ERROR 21912 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T15:17:38.115-03:00  WARN 21912 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+2023-01-29T15:17:38.116-03:00  INFO 21912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:17:38.119-03:00  INFO 21912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:17:38.122-03:00  INFO 21912 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T15:17:38.170-03:00  INFO 21912 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T15:17:38.188-03:00 ERROR 21912 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= INNODB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = INNODB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T15:17:58.541-03:00  INFO 13596 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 13596 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:17:58.543-03:00 DEBUG 13596 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:17:58.544-03:00  INFO 13596 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T15:17:59.064-03:00  INFO 13596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:17:59.108-03:00  INFO 13596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:17:59.577-03:00  INFO 13596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T15:17:59.585-03:00  INFO 13596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:17:59.585-03:00  INFO 13596 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:17:59.658-03:00  INFO 13596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:17:59.659-03:00  INFO 13596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1080 ms
+2023-01-29T15:17:59.773-03:00  INFO 13596 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:17:59.774-03:00  INFO 13596 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:17:59.774-03:00  INFO 13596 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:17:59.780-03:00  INFO 13596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:17:59.912-03:00  INFO 13596 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ab111735-1ef5-4b54-8ad6-f9b1b09e8c00 user=SA
+2023-01-29T15:17:59.913-03:00  INFO 13596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:17:59.921-03:00  INFO 13596 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:ab111735-1ef5-4b54-8ad6-f9b1b09e8c00 (H2 2.1)
+2023-01-29T15:17:59.967-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.013s)
+2023-01-29T15:17:59.971-03:00  INFO 13596 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:17:59.988-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:17:59.992-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:18:00.020-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:18:00.031-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:18:00.036-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:18:00.042-03:00  INFO 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:18:00.047-03:00 ERROR 13596 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T15:18:00.050-03:00  WARN 13596 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB
+
+2023-01-29T15:18:00.051-03:00  INFO 13596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:18:00.068-03:00  INFO 13596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:18:00.070-03:00  INFO 13596 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T15:18:00.079-03:00  INFO 13596 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T15:18:00.093-03:00 ERROR 13596 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 1
+Statement  : CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_role (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  description varchar(100) DEFAULT NULL,\000d\000a  role_name varchar(100) DEFAULT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  description varchar(100) DEFAULT NULL,
+  role_name varchar(100) DEFAULT NULL
+) ENGINE = InnoDB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T15:18:53.485-03:00  INFO 23960 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 23960 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:18:53.487-03:00 DEBUG 23960 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:18:53.487-03:00  INFO 23960 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T15:18:54.009-03:00  INFO 23960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:18:54.052-03:00  INFO 23960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:18:54.506-03:00  INFO 23960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T15:18:54.513-03:00  INFO 23960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:18:54.513-03:00  INFO 23960 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:18:54.594-03:00  INFO 23960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:18:54.594-03:00  INFO 23960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2023-01-29T15:18:54.707-03:00  INFO 23960 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:18:54.707-03:00  INFO 23960 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:18:54.708-03:00  INFO 23960 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:18:54.714-03:00  INFO 23960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:18:54.849-03:00  INFO 23960 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ac92d89c-bfb4-4787-9282-7631ab51c7fe user=SA
+2023-01-29T15:18:54.850-03:00  INFO 23960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:18:54.858-03:00  INFO 23960 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:ac92d89c-bfb4-4787-9282-7631ab51c7fe (H2 2.1)
+2023-01-29T15:18:54.901-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.012s)
+2023-01-29T15:18:54.906-03:00  INFO 23960 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:18:54.923-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:18:54.928-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:18:54.954-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:18:54.965-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:18:54.970-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:18:54.976-03:00  INFO 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:18:54.983-03:00 ERROR 23960 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T15:18:54.985-03:00  WARN 23960 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+2023-01-29T15:18:54.986-03:00  INFO 23960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:18:54.988-03:00  INFO 23960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:18:54.990-03:00  INFO 23960 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T15:18:54.999-03:00  INFO 23960 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T15:18:55.012-03:00 ERROR 23960 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T15:19:24.914-03:00  INFO 24380 --- [main] com.example.ec.ExplorecaliApplication    : Starting ExplorecaliApplication using Java 18.0.2.1 with PID 24380 (D:\javaestudos\explorecali\target\classes started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:19:24.916-03:00 DEBUG 24380 --- [main] com.example.ec.ExplorecaliApplication    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:19:24.916-03:00  INFO 24380 --- [main] com.example.ec.ExplorecaliApplication    : The following 1 profile is active: "default"
+2023-01-29T15:19:25.456-03:00  INFO 24380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:19:25.501-03:00  INFO 24380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:19:25.958-03:00  INFO 24380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-29T15:19:25.966-03:00  INFO 24380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:19:25.966-03:00  INFO 24380 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:19:26.039-03:00  INFO 24380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:19:26.039-03:00  INFO 24380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2023-01-29T15:19:26.156-03:00  INFO 24380 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:19:26.156-03:00  INFO 24380 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:19:26.156-03:00  INFO 24380 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:19:26.163-03:00  INFO 24380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:19:26.305-03:00  INFO 24380 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fceec56d-7ec6-45d7-b586-98e30a16169c user=SA
+2023-01-29T15:19:26.306-03:00  INFO 24380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:19:26.314-03:00  INFO 24380 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:fceec56d-7ec6-45d7-b586-98e30a16169c (H2 2.1)
+2023-01-29T15:19:26.356-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.012s)
+2023-01-29T15:19:26.362-03:00  INFO 24380 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:19:26.377-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:19:26.381-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:19:26.404-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:19:26.414-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:19:26.419-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:19:26.423-03:00  INFO 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:19:26.430-03:00 ERROR 24380 --- [main] o.f.core.internal.command.DbMigrate      : Migration of schema "PUBLIC" to version "2.1 - CreateSecuritySchema" failed! Please restore backups and roll back database and code!
+2023-01-29T15:19:26.432-03:00  WARN 24380 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+2023-01-29T15:19:26.432-03:00  INFO 24380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:19:26.438-03:00  INFO 24380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:19:26.441-03:00  INFO 24380 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-29T15:19:26.450-03:00  INFO 24380 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-29T15:19:26.462-03:00 ERROR 24380 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.ec.ExplorecaliApplication.main(ExplorecaliApplication.java:19)
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:384)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:274)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:273)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:246)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:141)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:143)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:141)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:98)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:176)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:204)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:128)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	... 18 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2.1__CreateSecuritySchema.sql failed
+-----------------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+Location   : db/migration/V2.1__CreateSecuritySchema.sql (D:\javaestudos\explorecali\target\classes\db\migration\V2.1__CreateSecuritySchema.sql)
+Line       : 8
+Statement  : CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:275)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:222)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:126)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:68)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:376)
+	... 36 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE security_user (\000d\000a  id BIGINT AUTO_INCREMENT PRIMARY KEY,\000d\000a  username varchar(255) NOT NULL,\000d\000a  password varchar(255) NOT NULL,\000d\000a  first_name varchar(255) NOT NULL,\000d\000a  last_name varchar(255) NOT NULL\000d\000a) ENGINE [*]= InnoDB"; expected "identifier"; SQL statement:
+CREATE TABLE security_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  username varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  first_name varchar(255) NOT NULL,
+  last_name varchar(255) NOT NULL
+) ENGINE = InnoDB [42001-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261)
+	at org.h2.command.Parser.readIdentifier(Parser.java:5656)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9279)
+	at org.h2.command.Parser.parseCreate(Parser.java:6784)
+	at org.h2.command.Parser.parsePrepared(Parser.java:763)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:201)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:95)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:210)
+	... 42 common frames omitted
+
+2023-01-29T15:21:18.720-03:00  INFO 23692 --- [main] c.e.ec.ExplorecaliApplicationTests       : Starting ExplorecaliApplicationTests using Java 18.0.2.1 with PID 23692 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:21:18.720-03:00 DEBUG 23692 --- [main] c.e.ec.ExplorecaliApplicationTests       : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:21:18.722-03:00  INFO 23692 --- [main] c.e.ec.ExplorecaliApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:21:19.397-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:21:19.455-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:21:20.013-03:00  INFO 23692 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:21:20.013-03:00  INFO 23692 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:21:20.013-03:00  INFO 23692 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:21:20.022-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:21:20.195-03:00  INFO 23692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:4a95dea6-177b-437d-863b-45187935c31a user=SA
+2023-01-29T15:21:20.197-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:21:20.207-03:00  INFO 23692 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:4a95dea6-177b-437d-863b-45187935c31a (H2 2.1)
+2023-01-29T15:21:20.272-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.014s)
+2023-01-29T15:21:20.277-03:00  INFO 23692 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:21:20.298-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:21:20.303-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:21:20.342-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:21:20.356-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:21:20.361-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:21:20.367-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:21:20.375-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:21:20.379-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.083s)
+2023-01-29T15:21:20.463-03:00  INFO 23692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:21:20.508-03:00  INFO 23692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-29T15:21:20.543-03:00  WARN 23692 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:21:20.659-03:00  INFO 23692 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:21:21.314-03:00  INFO 23692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:21:21.321-03:00  INFO 23692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:21.334-03:00  INFO 23692 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:21:21.940-03:00  WARN 23692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:21:22.904-03:00  INFO 23692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b55652a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8c54f48, org.springframework.security.web.context.SecurityContextHolderFilter@27e42fe8, org.springframework.security.web.header.HeaderWriterFilter@428440f2, org.springframework.security.web.authentication.logout.LogoutFilter@6ae1d5f1, com.example.ec.security.JwtTokenFilter@119f02d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71739267, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d810e94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48c584c, org.springframework.security.web.session.SessionManagementFilter@16021f6e, org.springframework.security.web.access.ExceptionTranslationFilter@655295bd, org.springframework.security.web.access.intercept.AuthorizationFilter@625430f8]
+2023-01-29T15:21:23.433-03:00  INFO 23692 --- [main] c.e.ec.ExplorecaliApplicationTests       : Started ExplorecaliApplicationTests in 4.905 seconds (process running for 6.241)
+2023-01-29T15:21:23.463-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.repo.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:23.470-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.repo.UserRepositoryTest
+2023-01-29T15:21:23.621-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.service.TourRatingServiceIntegrationTest]: TourRatingServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:23.628-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.service.TourRatingServiceIntegrationTest
+2023-01-29T15:21:23.644-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Get average score of tour 1 by customers {}
+2023-01-29T15:21:23.685-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:21:23.691-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Delete Rating for tour 1 and customer 4
+2023-01-29T15:21:23.701-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:21:23.714-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:21:23.723-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 456
+2023-01-29T15:21:23.730-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:21:23.733-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 456
+2023-01-29T15:21:23.739-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:21:23.742-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Rate tour 1 by customers [100, 101, 102]
+2023-01-29T15:21:23.742-03:00 DEBUG 23692 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 100
+2023-01-29T15:21:23.743-03:00 DEBUG 23692 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 101
+2023-01-29T15:21:23.744-03:00 DEBUG 23692 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 102
+2023-01-29T15:21:23.744-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:21:23.749-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:21:23.899-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Get average score of tour 1 by customers {}
+2023-01-29T15:21:23.903-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Delete Rating for tour 1 and customer 123
+2023-01-29T15:21:23.911-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 123
+2023-01-29T15:21:23.914-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Update some of Rating for tour 1 of customers 123
+2023-01-29T15:21:23.917-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Rate tour 1 by customers [123, 124]
+2023-01-29T15:21:23.917-03:00 DEBUG 23692 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 123
+2023-01-29T15:21:23.917-03:00 DEBUG 23692 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 124
+2023-01-29T15:21:23.919-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 123
+2023-01-29T15:21:23.922-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:21:23.968-03:00  INFO 23692 --- [main] c.example.ec.service.TourRatingService   : Lookup Rating for tour 1
+2023-01-29T15:21:23.970-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.service.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:23.972-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.service.UserServiceIntegrationTest
+2023-01-29T15:21:23.975-03:00  INFO 23692 --- [main] com.example.ec.service.UserService       : New user attempting to sign in
+2023-01-29T15:21:23.979-03:00  INFO 23692 --- [main] com.example.ec.service.UserService       : john doe is signing up with username: dummyUsername, password: dummypassword and role: ROLE_CSR.
+2023-01-29T15:21:24.978-03:00  WARN 23692 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2023-01-29T15:21:24.978-03:00 ERROR 23692 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.SECURITY_USER(ID) ( /* key:1 */ CAST(1 AS BIGINT), 'admin', '$2a$12$ZhGS.zcWt1gnZ9xRNp7inOvo5hIT0ngN7N.pN939cShxKvaQYHnnu', 'Administrator', 'Adminstrator')"; SQL statement:
+insert into security_user (id, first_name, last_name, password, username) values (default, ?, ?, ?, ?) [23505-214]
+2023-01-29T15:21:25.136-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.RatingControllerTest]: RatingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:25.144-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.RatingControllerTest
+2023-01-29T15:21:25.173-03:00  INFO 23692 --- [main] c.example.ec.web.RatingControllerTest    : Starting RatingControllerTest using Java 18.0.2.1 with PID 23692 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:21:25.173-03:00 DEBUG 23692 --- [main] c.example.ec.web.RatingControllerTest    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:21:25.173-03:00  INFO 23692 --- [main] c.example.ec.web.RatingControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:21:25.331-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:21:25.342-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:21:25.520-03:00  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-29T15:21:25.527-03:00  INFO 23692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:21:25.528-03:00  INFO 23692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:21:25.603-03:00  INFO 23692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:21:25.603-03:00  INFO 23692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 429 ms
+2023-01-29T15:21:25.687-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-01-29T15:21:25.696-03:00  INFO 23692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:0e691d2d-c488-43a6-80a5-e6bf5f326c20 user=SA
+2023-01-29T15:21:25.696-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-01-29T15:21:25.697-03:00  INFO 23692 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:0e691d2d-c488-43a6-80a5-e6bf5f326c20 (H2 2.1)
+2023-01-29T15:21:25.704-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.003s)
+2023-01-29T15:21:25.706-03:00  INFO 23692 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:21:25.718-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:21:25.721-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:21:25.739-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:21:25.749-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:21:25.754-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:21:25.759-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:21:25.765-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:21:25.768-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.050s)
+2023-01-29T15:21:25.782-03:00  INFO 23692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:21:25.784-03:00  WARN 23692 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:21:25.787-03:00  INFO 23692 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:21:25.837-03:00  INFO 23692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:21:25.838-03:00  INFO 23692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:25.843-03:00  INFO 23692 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:21:25.993-03:00  WARN 23692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:21:26.814-03:00  INFO 23692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25b2d26a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d67e03, org.springframework.security.web.context.SecurityContextHolderFilter@5ae50044, org.springframework.security.web.header.HeaderWriterFilter@dd3586e, org.springframework.security.web.authentication.logout.LogoutFilter@74baefb0, com.example.ec.security.JwtTokenFilter@962e8c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73d7b6b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64d0908c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@433e9108, org.springframework.security.web.session.SessionManagementFilter@605049be, org.springframework.security.web.access.ExceptionTranslationFilter@532f568e, org.springframework.security.web.access.intercept.AuthorizationFilter@5aa2168f]
+2023-01-29T15:21:27.334-03:00  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61815 (http) with context path ''
+2023-01-29T15:21:27.337-03:00  INFO 23692 --- [main] c.example.ec.web.RatingControllerTest    : Started RatingControllerTest in 2.19 seconds (process running for 10.145)
+2023-01-29T15:21:27.484-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T15:21:27.484-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T15:21:27.486-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-29T15:21:27.493-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.493-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:27.515-03:00  INFO 23692 --- [http-nio-auto-1-exec-1] com.example.ec.web.RatingController      : GET /ratings/{id}
+2023-01-29T15:21:27.581-03:00  INFO 23692 --- [http-nio-auto-1-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.581-03:00  INFO 23692 --- [http-nio-auto-1-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:27.582-03:00  INFO 23692 --- [http-nio-auto-1-exec-2] com.example.ec.web.RatingController      : GET /ratings
+2023-01-29T15:21:27.590-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.TourRatingControllerTest]: TourRatingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:27.591-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.TourRatingControllerTest
+2023-01-29T15:21:27.617-03:00  INFO 23692 --- [http-nio-auto-1-exec-3] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.632-03:00  INFO 23692 --- [http-nio-auto-1-exec-3] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4NywiZXhwIjoxNjc1MDE3MDg3fQ.Z7L7r8e1lmf22KgvCn2t0etLKmoKrfZ_IZBwKcihevc]
+2023-01-29T15:21:27.640-03:00  INFO 23692 --- [http-nio-auto-1-exec-3] c.example.ec.web.TourRatingController    : DELETE /tours/999/ratings/1000
+2023-01-29T15:21:27.651-03:00  INFO 23692 --- [http-nio-auto-1-exec-4] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.651-03:00  INFO 23692 --- [http-nio-auto-1-exec-4] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:27.656-03:00  INFO 23692 --- [http-nio-auto-1-exec-4] c.example.ec.web.TourRatingController    : GET /tours/999/ratings
+2023-01-29T15:21:27.681-03:00  INFO 23692 --- [http-nio-auto-1-exec-5] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.685-03:00  INFO 23692 --- [http-nio-auto-1-exec-5] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4NywiZXhwIjoxNjc1MDE3MDg3fQ.Z7L7r8e1lmf22KgvCn2t0etLKmoKrfZ_IZBwKcihevc]
+2023-01-29T15:21:27.716-03:00  INFO 23692 --- [http-nio-auto-1-exec-5] c.example.ec.web.TourRatingController    : PUT /tours/999/ratings
+2023-01-29T15:21:27.725-03:00  INFO 23692 --- [http-nio-auto-1-exec-6] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.728-03:00  INFO 23692 --- [http-nio-auto-1-exec-6] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4NywiZXhwIjoxNjc1MDE3MDg3fQ.Z7L7r8e1lmf22KgvCn2t0etLKmoKrfZ_IZBwKcihevc]
+2023-01-29T15:21:27.733-03:00  INFO 23692 --- [http-nio-auto-1-exec-6] c.example.ec.web.TourRatingController    : POST /tours/999/ratings
+2023-01-29T15:21:27.741-03:00  INFO 23692 --- [http-nio-auto-1-exec-7] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.742-03:00  INFO 23692 --- [http-nio-auto-1-exec-7] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:27.743-03:00  INFO 23692 --- [http-nio-auto-1-exec-7] c.example.ec.web.TourRatingController    : GET /tours/999/ratings/average
+2023-01-29T15:21:27.752-03:00  INFO 23692 --- [http-nio-auto-1-exec-8] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.756-03:00  INFO 23692 --- [http-nio-auto-1-exec-8] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4NywiZXhwIjoxNjc1MDE3MDg3fQ.Z7L7r8e1lmf22KgvCn2t0etLKmoKrfZ_IZBwKcihevc]
+2023-01-29T15:21:27.759-03:00  INFO 23692 --- [http-nio-auto-1-exec-8] c.example.ec.web.TourRatingController    : POST /tours/999/ratings/3
+2023-01-29T15:21:27.768-03:00  INFO 23692 --- [http-nio-auto-1-exec-9] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:27.771-03:00  INFO 23692 --- [http-nio-auto-1-exec-9] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4NywiZXhwIjoxNjc1MDE3MDg3fQ.Z7L7r8e1lmf22KgvCn2t0etLKmoKrfZ_IZBwKcihevc]
+2023-01-29T15:21:27.773-03:00  INFO 23692 --- [http-nio-auto-1-exec-9] c.example.ec.web.TourRatingController    : PATCH /tours/999/ratings
+2023-01-29T15:21:27.780-03:00  INFO 23692 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:21:27.782-03:00  INFO 23692 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.UserControllerTest
+2023-01-29T15:21:27.803-03:00  INFO 23692 --- [main] com.example.ec.web.UserControllerTest    : Starting UserControllerTest using Java 18.0.2.1 with PID 23692 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:21:27.803-03:00 DEBUG 23692 --- [main] com.example.ec.web.UserControllerTest    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:21:27.803-03:00  INFO 23692 --- [main] com.example.ec.web.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:21:27.989-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:21:28.001-03:00  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:21:28.074-03:00  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-29T15:21:28.075-03:00  INFO 23692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:21:28.076-03:00  INFO 23692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:21:28.108-03:00  INFO 23692 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:21:28.108-03:00  INFO 23692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 303 ms
+2023-01-29T15:21:28.182-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-01-29T15:21:28.206-03:00  INFO 23692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:da6c259e-141b-41e4-8743-2f37c6eeec00 user=SA
+2023-01-29T15:21:28.206-03:00  INFO 23692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-01-29T15:21:28.206-03:00  INFO 23692 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:da6c259e-141b-41e4-8743-2f37c6eeec00 (H2 2.1)
+2023-01-29T15:21:28.211-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2023-01-29T15:21:28.212-03:00  INFO 23692 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:21:28.233-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:21:28.234-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:21:28.251-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:21:28.257-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:21:28.261-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:21:28.265-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:21:28.270-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:21:28.272-03:00  INFO 23692 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.040s)
+2023-01-29T15:21:28.286-03:00  INFO 23692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:21:28.288-03:00  WARN 23692 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:21:28.291-03:00  INFO 23692 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:21:28.338-03:00  INFO 23692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:21:28.339-03:00  INFO 23692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:28.343-03:00  INFO 23692 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:21:28.450-03:00  WARN 23692 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:21:29.123-03:00  INFO 23692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d1f3f67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cc112a5, org.springframework.security.web.context.SecurityContextHolderFilter@58e22835, org.springframework.security.web.header.HeaderWriterFilter@427b8fe4, org.springframework.security.web.authentication.logout.LogoutFilter@7fe5dd5c, com.example.ec.security.JwtTokenFilter@2ea0e29d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7647d789, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@685d620a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c31eb42, org.springframework.security.web.session.SessionManagementFilter@56510bb2, org.springframework.security.web.access.ExceptionTranslationFilter@2631075f, org.springframework.security.web.access.intercept.AuthorizationFilter@3498df74]
+2023-01-29T15:21:29.239-03:00  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61820 (http) with context path ''
+2023-01-29T15:21:29.242-03:00  INFO 23692 --- [main] com.example.ec.web.UserControllerTest    : Started UserControllerTest in 1.457 seconds (process running for 12.05)
+2023-01-29T15:21:29.251-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T15:21:29.251-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T15:21:29.252-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-29T15:21:29.252-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.255-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4OSwiZXhwIjoxNjc1MDE3MDg5fQ.wGncBSubsibmWI4WmzrKI23ljLhu8cOH2MtD795LzWM]
+2023-01-29T15:21:29.265-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.268-03:00  INFO 23692 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjQ4OSwiZXhwIjoxNjc1MDE3MDg5fQ.wGncBSubsibmWI4WmzrKI23ljLhu8cOH2MtD795LzWM]
+2023-01-29T15:21:29.276-03:00  INFO 23692 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.276-03:00  INFO 23692 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:29.279-03:00 ERROR 23692 --- [http-nio-auto-2-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.HttpServerErrorException: 403 Login Failed] with root cause
+
+org.springframework.web.client.HttpServerErrorException: 403 Login Failed
+	at com.example.ec.web.UserController.lambda$login$0(UserController.java:28)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.example.ec.web.UserController.login(UserController.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699)
+	at com.example.ec.web.UserController$$SpringCGLIB$$0.login(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.ec.security.JwtTokenFilter.doFilter(JwtTokenFilter.java:62)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilterInternal(SecurityContextHolderFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-01-29T15:21:29.281-03:00  INFO 23692 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.281-03:00  INFO 23692 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:21:29.289-03:00  INFO 23692 --- [http-nio-auto-2-exec-3] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.292-03:00  INFO 23692 --- [http-nio-auto-2-exec-3] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNjc1MDE2NDg5LCJleHAiOjE2NzUwMTcwODl9.0iho59qcb43YSmJeRnZHzZuC6Cg0l5jkl6uC0leBwV8]
+2023-01-29T15:21:29.302-03:00  INFO 23692 --- [http-nio-auto-2-exec-4] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:21:29.305-03:00  INFO 23692 --- [http-nio-auto-2-exec-4] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNjc1MDE2NDg5LCJleHAiOjE2NzUwMTcwODl9.0iho59qcb43YSmJeRnZHzZuC6Cg0l5jkl6uC0leBwV8]
+2023-01-29T15:21:29.350-03:00  INFO 23692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:29.362-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:21:29.410-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:21:29.425-03:00  INFO 23692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:29.425-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-01-29T15:21:29.466-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-01-29T15:21:29.494-03:00  INFO 23692 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:21:29.494-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-01-29T15:21:29.533-03:00  INFO 23692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-01-29T15:22:28.191-03:00  INFO 8168 --- [main] c.e.ec.ExplorecaliApplicationTests       : Starting ExplorecaliApplicationTests using Java 18.0.2.1 with PID 8168 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:22:28.191-03:00 DEBUG 8168 --- [main] c.e.ec.ExplorecaliApplicationTests       : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:22:28.192-03:00  INFO 8168 --- [main] c.e.ec.ExplorecaliApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:22:28.844-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:22:28.901-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:22:29.435-03:00  INFO 8168 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2023-01-29T15:22:29.435-03:00  INFO 8168 --- [main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-01-29T15:22:29.435-03:00  INFO 8168 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-01-29T15:22:29.443-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-29T15:22:29.594-03:00  INFO 8168 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:eeba5548-da72-4a30-bb71-c09d9f2563b7 user=SA
+2023-01-29T15:22:29.596-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-29T15:22:29.604-03:00  INFO 8168 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:eeba5548-da72-4a30-bb71-c09d9f2563b7 (H2 2.1)
+2023-01-29T15:22:29.660-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.016s)
+2023-01-29T15:22:29.665-03:00  INFO 8168 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:22:29.683-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:22:29.688-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:22:29.723-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:22:29.736-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:22:29.741-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:22:29.746-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:22:29.753-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:22:29.757-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.075s)
+2023-01-29T15:22:29.839-03:00  INFO 8168 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:22:29.884-03:00  INFO 8168 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2023-01-29T15:22:29.919-03:00  WARN 8168 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:22:30.042-03:00  INFO 8168 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:22:30.638-03:00  INFO 8168 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:22:30.645-03:00  INFO 8168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:30.660-03:00  INFO 8168 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:22:31.261-03:00  WARN 8168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:22:32.120-03:00  INFO 8168 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ab20a7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6db160b4, org.springframework.security.web.context.SecurityContextHolderFilter@2c64ee53, org.springframework.security.web.header.HeaderWriterFilter@3b4cce5a, org.springframework.security.web.authentication.logout.LogoutFilter@1c63b39a, com.example.ec.security.JwtTokenFilter@64ee9290, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@162c89ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@644f033d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17e7cc67, org.springframework.security.web.session.SessionManagementFilter@3bb186b, org.springframework.security.web.access.ExceptionTranslationFilter@561b4c61, org.springframework.security.web.access.intercept.AuthorizationFilter@7e729046]
+2023-01-29T15:22:32.527-03:00  INFO 8168 --- [main] c.e.ec.ExplorecaliApplicationTests       : Started ExplorecaliApplicationTests in 4.546 seconds (process running for 5.824)
+2023-01-29T15:22:32.552-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.repo.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:32.558-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.repo.UserRepositoryTest
+2023-01-29T15:22:32.682-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.service.TourRatingServiceIntegrationTest]: TourRatingServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:32.687-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.service.TourRatingServiceIntegrationTest
+2023-01-29T15:22:32.696-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Get average score of tour 1 by customers {}
+2023-01-29T15:22:32.722-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:22:32.726-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Delete Rating for tour 1 and customer 4
+2023-01-29T15:22:32.734-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:22:32.746-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:22:32.755-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 456
+2023-01-29T15:22:32.763-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:22:32.767-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 456
+2023-01-29T15:22:32.772-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:22:32.774-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Rate tour 1 by customers [100, 101, 102]
+2023-01-29T15:22:32.775-03:00 DEBUG 8168 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 100
+2023-01-29T15:22:32.776-03:00 DEBUG 8168 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 101
+2023-01-29T15:22:32.776-03:00 DEBUG 8168 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 102
+2023-01-29T15:22:32.777-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:22:32.783-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 456
+2023-01-29T15:22:32.933-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Get average score of tour 1 by customers {}
+2023-01-29T15:22:32.938-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Delete Rating for tour 1 and customer 123
+2023-01-29T15:22:32.947-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Update all of Rating for tour 1 of customers 123
+2023-01-29T15:22:32.950-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Update some of Rating for tour 1 of customers 123
+2023-01-29T15:22:32.953-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Rate tour 1 by customers [123, 124]
+2023-01-29T15:22:32.954-03:00 DEBUG 8168 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 123
+2023-01-29T15:22:32.954-03:00 DEBUG 8168 --- [main] c.example.ec.service.TourRatingService   : Attempt to create Tour Rating for customer 124
+2023-01-29T15:22:32.958-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Create Rating for tour 1 of customers 123
+2023-01-29T15:22:32.960-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup all Ratings
+2023-01-29T15:22:33.021-03:00  INFO 8168 --- [main] c.example.ec.service.TourRatingService   : Lookup Rating for tour 1
+2023-01-29T15:22:33.023-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.service.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:33.024-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.service.UserServiceIntegrationTest
+2023-01-29T15:22:33.028-03:00  INFO 8168 --- [main] com.example.ec.service.UserService       : New user attempting to sign in
+2023-01-29T15:22:33.032-03:00  INFO 8168 --- [main] com.example.ec.service.UserService       : john doe is signing up with username: dummyUsername, password: dummypassword and role: ROLE_CSR.
+2023-01-29T15:22:34.142-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.RatingControllerTest]: RatingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:34.149-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.RatingControllerTest
+2023-01-29T15:22:34.173-03:00  INFO 8168 --- [main] c.example.ec.web.RatingControllerTest    : Starting RatingControllerTest using Java 18.0.2.1 with PID 8168 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:22:34.173-03:00 DEBUG 8168 --- [main] c.example.ec.web.RatingControllerTest    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:22:34.173-03:00  INFO 8168 --- [main] c.example.ec.web.RatingControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:22:34.329-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:22:34.339-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:22:34.517-03:00  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-29T15:22:34.525-03:00  INFO 8168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:22:34.525-03:00  INFO 8168 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:22:34.597-03:00  INFO 8168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:22:34.597-03:00  INFO 8168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 423 ms
+2023-01-29T15:22:34.663-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-01-29T15:22:34.669-03:00  INFO 8168 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:ae6d90e3-9747-4182-9264-db242a9c86f9 user=SA
+2023-01-29T15:22:34.669-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-01-29T15:22:34.669-03:00  INFO 8168 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:ae6d90e3-9747-4182-9264-db242a9c86f9 (H2 2.1)
+2023-01-29T15:22:34.675-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2023-01-29T15:22:34.676-03:00  INFO 8168 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:22:34.684-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:22:34.686-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:22:34.701-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:22:34.710-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:22:34.716-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:22:34.720-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:22:34.726-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:22:34.729-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.045s)
+2023-01-29T15:22:34.743-03:00  INFO 8168 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:22:34.745-03:00  WARN 8168 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:22:34.748-03:00  INFO 8168 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:22:34.796-03:00  INFO 8168 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:22:34.796-03:00  INFO 8168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:34.800-03:00  INFO 8168 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:22:34.922-03:00  WARN 8168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:22:35.638-03:00  INFO 8168 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27153ba2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2489ee11, org.springframework.security.web.context.SecurityContextHolderFilter@1cdb4bd3, org.springframework.security.web.header.HeaderWriterFilter@5ae7e5db, org.springframework.security.web.authentication.logout.LogoutFilter@7aaf260f, com.example.ec.security.JwtTokenFilter@24209520, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cc6bfdb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59ea4ca5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@80ca2c3, org.springframework.security.web.session.SessionManagementFilter@29398b59, org.springframework.security.web.access.ExceptionTranslationFilter@782b12c9, org.springframework.security.web.access.intercept.AuthorizationFilter@789a9354]
+2023-01-29T15:22:35.961-03:00  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61857 (http) with context path ''
+2023-01-29T15:22:35.964-03:00  INFO 8168 --- [main] c.example.ec.web.RatingControllerTest    : Started RatingControllerTest in 1.811 seconds (process running for 9.26)
+2023-01-29T15:22:36.094-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T15:22:36.094-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T15:22:36.095-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-29T15:22:36.102-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.103-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:36.129-03:00  INFO 8168 --- [http-nio-auto-1-exec-1] com.example.ec.web.RatingController      : GET /ratings/{id}
+2023-01-29T15:22:36.193-03:00  INFO 8168 --- [http-nio-auto-1-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.193-03:00  INFO 8168 --- [http-nio-auto-1-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:36.194-03:00  INFO 8168 --- [http-nio-auto-1-exec-2] com.example.ec.web.RatingController      : GET /ratings
+2023-01-29T15:22:36.203-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.TourRatingControllerTest]: TourRatingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:36.204-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.TourRatingControllerTest
+2023-01-29T15:22:36.228-03:00  INFO 8168 --- [http-nio-auto-1-exec-3] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.244-03:00  INFO 8168 --- [http-nio-auto-1-exec-3] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NiwiZXhwIjoxNjc1MDE3MTU2fQ.RheZvRYHzQg1yGA9ZKtTwgwpMB7h-4le-WWsxrK1sig]
+2023-01-29T15:22:36.254-03:00  INFO 8168 --- [http-nio-auto-1-exec-3] c.example.ec.web.TourRatingController    : DELETE /tours/999/ratings/1000
+2023-01-29T15:22:36.265-03:00  INFO 8168 --- [http-nio-auto-1-exec-4] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.266-03:00  INFO 8168 --- [http-nio-auto-1-exec-4] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:36.272-03:00  INFO 8168 --- [http-nio-auto-1-exec-4] c.example.ec.web.TourRatingController    : GET /tours/999/ratings
+2023-01-29T15:22:36.302-03:00  INFO 8168 --- [http-nio-auto-1-exec-5] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.305-03:00  INFO 8168 --- [http-nio-auto-1-exec-5] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NiwiZXhwIjoxNjc1MDE3MTU2fQ.RheZvRYHzQg1yGA9ZKtTwgwpMB7h-4le-WWsxrK1sig]
+2023-01-29T15:22:36.341-03:00  INFO 8168 --- [http-nio-auto-1-exec-5] c.example.ec.web.TourRatingController    : PUT /tours/999/ratings
+2023-01-29T15:22:36.351-03:00  INFO 8168 --- [http-nio-auto-1-exec-6] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.354-03:00  INFO 8168 --- [http-nio-auto-1-exec-6] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NiwiZXhwIjoxNjc1MDE3MTU2fQ.RheZvRYHzQg1yGA9ZKtTwgwpMB7h-4le-WWsxrK1sig]
+2023-01-29T15:22:36.357-03:00  INFO 8168 --- [http-nio-auto-1-exec-6] c.example.ec.web.TourRatingController    : POST /tours/999/ratings
+2023-01-29T15:22:36.364-03:00  INFO 8168 --- [http-nio-auto-1-exec-7] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.365-03:00  INFO 8168 --- [http-nio-auto-1-exec-7] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:36.366-03:00  INFO 8168 --- [http-nio-auto-1-exec-7] c.example.ec.web.TourRatingController    : GET /tours/999/ratings/average
+2023-01-29T15:22:36.375-03:00  INFO 8168 --- [http-nio-auto-1-exec-8] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.378-03:00  INFO 8168 --- [http-nio-auto-1-exec-8] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NiwiZXhwIjoxNjc1MDE3MTU2fQ.RheZvRYHzQg1yGA9ZKtTwgwpMB7h-4le-WWsxrK1sig]
+2023-01-29T15:22:36.382-03:00  INFO 8168 --- [http-nio-auto-1-exec-8] c.example.ec.web.TourRatingController    : POST /tours/999/ratings/3
+2023-01-29T15:22:36.389-03:00  INFO 8168 --- [http-nio-auto-1-exec-9] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:36.392-03:00  INFO 8168 --- [http-nio-auto-1-exec-9] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NiwiZXhwIjoxNjc1MDE3MTU2fQ.RheZvRYHzQg1yGA9ZKtTwgwpMB7h-4le-WWsxrK1sig]
+2023-01-29T15:22:36.394-03:00  INFO 8168 --- [http-nio-auto-1-exec-9] c.example.ec.web.TourRatingController    : PATCH /tours/999/ratings
+2023-01-29T15:22:36.399-03:00  INFO 8168 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ec.web.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-29T15:22:36.400-03:00  INFO 8168 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ec.ExplorecaliApplication for test class com.example.ec.web.UserControllerTest
+2023-01-29T15:22:36.416-03:00  INFO 8168 --- [main] com.example.ec.web.UserControllerTest    : Starting UserControllerTest using Java 18.0.2.1 with PID 8168 (started by Victor in D:\javaestudos\explorecali)
+2023-01-29T15:22:36.416-03:00 DEBUG 8168 --- [main] com.example.ec.web.UserControllerTest    : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-01-29T15:22:36.416-03:00  INFO 8168 --- [main] com.example.ec.web.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-01-29T15:22:36.562-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-29T15:22:36.572-03:00  INFO 8168 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2023-01-29T15:22:36.648-03:00  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-01-29T15:22:36.648-03:00  INFO 8168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-29T15:22:36.649-03:00  INFO 8168 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-01-29T15:22:36.674-03:00  INFO 8168 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-01-29T15:22:36.674-03:00  INFO 8168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 257 ms
+2023-01-29T15:22:36.737-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-01-29T15:22:36.763-03:00  INFO 8168 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:a92f53cd-e02a-4b7a-9a5b-7bda5016888b user=SA
+2023-01-29T15:22:36.763-03:00  INFO 8168 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-01-29T15:22:36.763-03:00  INFO 8168 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:a92f53cd-e02a-4b7a-9a5b-7bda5016888b (H2 2.1)
+2023-01-29T15:22:36.768-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.002s)
+2023-01-29T15:22:36.769-03:00  INFO 8168 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2023-01-29T15:22:36.795-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2023-01-29T15:22:36.797-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.1 - CreateTourSchema"
+2023-01-29T15:22:36.813-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.2 - AddTours"
+2023-01-29T15:22:36.820-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.3 - CreateTourRatingSchema"
+2023-01-29T15:22:36.824-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1.4 - AddTourRatings"
+2023-01-29T15:22:36.828-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.1 - CreateSecuritySchema"
+2023-01-29T15:22:36.832-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2.2 - AddUsers"
+2023-01-29T15:22:36.834-03:00  INFO 8168 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema "PUBLIC", now at version v2.2 (execution time 00:00.039s)
+2023-01-29T15:22:36.846-03:00  INFO 8168 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-29T15:22:36.848-03:00  WARN 8168 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-29T15:22:36.850-03:00  INFO 8168 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-29T15:22:36.894-03:00  INFO 8168 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-29T15:22:36.894-03:00  INFO 8168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:36.897-03:00  INFO 8168 --- [main] com.example.ec.security.JwtProvider      : Secret key: QfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5 Exp: 600000
+2023-01-29T15:22:36.987-03:00  WARN 8168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-29T15:22:37.804-03:00  INFO 8168 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b6bb1bd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ae57c9, org.springframework.security.web.context.SecurityContextHolderFilter@62b9757d, org.springframework.security.web.header.HeaderWriterFilter@755a3ffb, org.springframework.security.web.authentication.logout.LogoutFilter@5c781425, com.example.ec.security.JwtTokenFilter@7008055, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2da8cbb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9a99c10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@201a976f, org.springframework.security.web.session.SessionManagementFilter@5d642e46, org.springframework.security.web.access.ExceptionTranslationFilter@37994ff, org.springframework.security.web.access.intercept.AuthorizationFilter@726aaaf0]
+2023-01-29T15:22:37.935-03:00  INFO 8168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61861 (http) with context path ''
+2023-01-29T15:22:37.938-03:00  INFO 8168 --- [main] com.example.ec.web.UserControllerTest    : Started UserControllerTest in 1.534 seconds (process running for 11.234)
+2023-01-29T15:22:37.947-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-29T15:22:37.947-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-29T15:22:37.948-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-29T15:22:37.949-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:37.953-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NywiZXhwIjoxNjc1MDE3MTU3fQ.5An4arIY-U45Dfo4NoB8zSUKIdPLxl81GwzY9_c277M]
+2023-01-29T15:22:37.965-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:37.968-03:00  INFO 8168 --- [http-nio-auto-2-exec-1] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DU1IifV0sImlhdCI6MTY3NTAxNjU1NywiZXhwIjoxNjc1MDE3MTU3fQ.5An4arIY-U45Dfo4NoB8zSUKIdPLxl81GwzY9_c277M]
+2023-01-29T15:22:37.978-03:00  INFO 8168 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:37.978-03:00  INFO 8168 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:37.982-03:00 ERROR 8168 --- [http-nio-auto-2-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.HttpServerErrorException: 403 Login Failed] with root cause
+
+org.springframework.web.client.HttpServerErrorException: 403 Login Failed
+	at com.example.ec.web.UserController.lambda$login$0(UserController.java:28)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.example.ec.web.UserController.login(UserController.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699)
+	at com.example.ec.web.UserController$$SpringCGLIB$$0.login(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.ec.security.JwtTokenFilter.doFilter(JwtTokenFilter.java:62)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilterInternal(SecurityContextHolderFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-01-29T15:22:37.985-03:00  INFO 8168 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:37.985-03:00  INFO 8168 --- [http-nio-auto-2-exec-2] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional.empty
+2023-01-29T15:22:37.993-03:00  INFO 8168 --- [http-nio-auto-2-exec-3] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:37.997-03:00  INFO 8168 --- [http-nio-auto-2-exec-3] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNjc1MDE2NTU3LCJleHAiOjE2NzUwMTcxNTd9.nMOLXqfcjprOqbcGQZjAv8qOECIefc__PgShUSZjTrg]
+2023-01-29T15:22:38.007-03:00  INFO 8168 --- [http-nio-auto-2-exec-4] com.example.ec.security.JwtTokenFilter   : Process request to check for a JSON Web Token 
+2023-01-29T15:22:38.010-03:00  INFO 8168 --- [http-nio-auto-2-exec-4] com.example.ec.security.JwtTokenFilter   : TOKEN: Optional[eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbm9ueW1vdXMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaWF0IjoxNjc1MDE2NTU4LCJleHAiOjE2NzUwMTcxNTh9.CqgL2M82EAOqqVVJmm1OnoUCcf4dkr1ReucX_25YiEs]
+2023-01-29T15:22:38.063-03:00  INFO 8168 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:38.064-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-29T15:22:38.107-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-29T15:22:38.166-03:00  INFO 8168 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:38.168-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-01-29T15:22:38.208-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-01-29T15:22:38.236-03:00  INFO 8168 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-29T15:22:38.236-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-01-29T15:22:38.263-03:00  INFO 8168 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
